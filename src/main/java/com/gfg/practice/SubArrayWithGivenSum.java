@@ -9,7 +9,7 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MinMaxDemo {
+public class SubArrayWithGivenSum {
 
 	public static void main(String[] args) {
 
@@ -18,7 +18,6 @@ public class MinMaxDemo {
 		try {
 
 			System.setOut(new PrintStream(outputPath));
-			System.out.println("Hello Outpur ???");
 		} catch (FileNotFoundException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -31,7 +30,7 @@ public class MinMaxDemo {
 
 			int s = 252576;
 			System.out.println(">>>> " + A[12432] + " Is Equal : " + (s == A[12432]));
-			System.out.println("Sum of Min and Max is : " + subarraySum(A, A.length, s));
+			System.out.println("Sub Array from : " + subarraySum(A, A.length, s));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -53,13 +52,13 @@ public class MinMaxDemo {
 				index.add(i + 1);
 				break;
 			} else if ((i + 1 == n) || (sum > s && pivot < n)) {
-				System.out.println("Index : " + i + " , Sum : " + sum + " , Pivot : " + pivot);
+//				System.out.println("Index : " + i + " , Sum : " + sum + " , Pivot : " + pivot);
 				i = pivot;
 				pivot++;
 				sum = 0;
 				if (pivot >= n) {
 					index.add(-1);
-					System.out.println(">>>>>>>>> Pivot Finished <<<<<<<<<<<<");
+//					System.out.println(">>>>>>>>> Pivot Finished <<<<<<<<<<<<");
 					break;
 				}
 
